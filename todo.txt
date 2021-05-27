@@ -1,0 +1,2 @@
+- Ajouter du style (navigation)
+- Ajouter les clés pour la flatList (key extractor et autre);
