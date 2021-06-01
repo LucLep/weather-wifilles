@@ -1,21 +1,30 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import About from "./pages/About";
-import SearchScreen from "./pages/Search";
-import {NavigationContainer,} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Feather} from '@expo/vector-icons';
-import {COLORS} from "./styles/Style";
+import { StyleSheet, Text, View } from 'react-native';
+import About from './pages/About';
+import SearchScreen from './pages/Search';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Feather } from '@expo/vector-icons';
+import { COLORS } from './styles/Style';
 
 const Tab = createBottomTabNavigator();
 
+// Todo : Exercice : Exercice créer deux pages pour la partie navigation
+// Todo : Exercice : Ajouter la navigation par bottom tabs.
+// Todo : Exercice : Créer un composant bouton customisé
+// Todo : Exercice : Faire les appels API et les mettre dans le bon ordre
+// Todo : Exercice : Styliser certaines parties de l'application
+// Todo : Exercice : Créer une troisième page
+// Todo : Exercice : Mettre en place la deuxième navigation avec la troisième page
+// Todo : Exercice : Développer une ListView
+// Todo : Exercice : Développer le rendu avec icône
 export default function App() {
     return (
         <NavigationContainer>
             <Tab.Navigator
-                screenOptions={({route}) => ({
-                    tabBarIcon: ({focused}) => {
+                screenOptions={({ route }) => ({
+                    tabBarIcon: ({ focused }) => {
                         let iconName;
 
                         if (route.name === 'A propos') {
@@ -24,10 +33,15 @@ export default function App() {
                             iconName = 'home';
                         }
 
-                        return <Feather name={iconName} size={30} color={focused ? COLORS.primary : 'gray'}/>
-                    }
+                        return (
+                            <Feather
+                                name={iconName}
+                                size={30}
+                                color={focused ? COLORS.primary : 'gray'}
+                            />
+                        );
+                    },
                 })}
-
                 tabBarOptions={{
                     activeBackgroundColor: '#ffffff',
                     inactiveBackgroundColor: '#ffffff',
@@ -39,23 +53,12 @@ export default function App() {
                     },
                     style: {
                         height: '7%',
-                    }
-                }}>
-                <Tab.Screen name={"A propos"} component={About}/>
-                <Tab.Screen name={"Rechercher"} component={SearchScreen}/>
+                    },
+                }}
+            >
+                <Tab.Screen name={'A propos'} component={About} />
+                <Tab.Screen name={'Rechercher'} component={SearchScreen} />
             </Tab.Navigator>
         </NavigationContainer>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    tab: {
-        fontSize: 22,
-    }
-});
