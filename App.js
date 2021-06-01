@@ -10,15 +10,21 @@ import { COLORS } from './styles/Style';
 
 const Tab = createBottomTabNavigator();
 
+// Todo : Leçon : Création et intégration de composant
 // Todo : Exercice : Exercice créer deux pages pour la partie navigation
-// Todo : Exercice : Ajouter la navigation par bottom tabs.
 // Todo : Exercice : Créer un composant bouton customisé
-// Todo : Exercice : Faire les appels API et les mettre dans le bon ordre
+// Todo : Leçon : Le style dans un composant
 // Todo : Exercice : Styliser certaines parties de l'application
+// Todo : Leçon : Navigation dans une appli et composant de navigation
+// Todo : Exercice : Ajouter la navigation par bottom tabs.
+// Todo : Leçon : Gestion des calls API et résolution des Promises
+// Todo : Exercice : Faire les appels API et les mettre dans le bon ordre
 // Todo : Exercice : Créer une troisième page
 // Todo : Exercice : Mettre en place la deuxième navigation avec la troisième page
+// Todo : Leçon : Gestion d'une ListView
 // Todo : Exercice : Développer une ListView
 // Todo : Exercice : Développer le rendu avec icône
+// Todo : Exercice : Polissage de l'application 
 export default function App() {
     return (
         <NavigationContainer>
