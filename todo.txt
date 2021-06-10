@@ -1,2 +1,2 @@
-- Ajouter du style (navigation)
-- Ajouter les clés pour la flatList (key extractor et autre);
+- Faire des composants exemples
+- Faire une branche de départ avec les composants exemples et une page App un peu stylisé.

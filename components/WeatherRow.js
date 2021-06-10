@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import moment from "moment";
 import 'moment/locale/fr';
 import { Feather } from '@expo/vector-icons';
-import {COLORS} from "../styles/Style";
+import { COLORS } from "../styles/Style";
 
 moment.locale('fr')
 
@@ -23,13 +23,13 @@ const WeatherRow = ({ item, index }) => {
     const renderWeatherIcon = (weatherType) => {
         let iconType = '';
         switch (weatherType) {
-            case 'rain':
+            case 'Rain':
                 iconType = 'cloud-rain';
                 break;
-            case 'clouds':
+            case 'Clouds':
                 iconType = 'cloud';
                 break;
-            case 'sun ':
+            case 'Sun ':
             default:
                 iconType = 'sun';
                 break;
@@ -92,12 +92,6 @@ const styles = StyleSheet.create({
     firstView: {
         backgroundColor: COLORS.secondaryLight,
     },
-    firstTemperature: {
-
-    },
-    firstDate: {
-
-    }
 });
 
 export default WeatherRow;

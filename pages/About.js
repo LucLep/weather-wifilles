@@ -4,6 +4,8 @@ import { COLORS } from '../styles/Style';
 import CustomButton from '../components/CustomButton';
 
 const About = ({ navigation }) => {
+  const goToSearch = () => navigation.navigate('Rechercher');
+
     return (
         <View style={styles.view}>
             <Text style={styles.title}>A propos de l'application</Text>
@@ -15,12 +17,12 @@ const About = ({ navigation }) => {
             <View style={styles.buttonContainer}>
                 <Button
                     color={COLORS.primary}
-                    onPress={() => navigation.navigate('Rechercher')}
+                    onPress={goToSearch}
                     title={'Rechercher'}
                 />
             </View>
             {/* A développer et faire pendant un exercice */}
-            <CustomButton onClick={() => navigation.navigate('Rechercher')} title={'Rechercher'} />
+            <CustomButton onClick={goToSearch} title={'Rechercher'} />
         </View>
     );
 };

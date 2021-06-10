@@ -21,6 +21,8 @@ const Result = ({ route }) => {
             } = response.data;
 
             fetchWeather(longitude, latitude);
+        }).catch((e) => {
+            console.error(e);
         });
     };
 
@@ -40,7 +42,6 @@ const Result = ({ route }) => {
     };
 
     useEffect(() => {
-        // fetchWeather()
         fetchCityCoordinates();
     }, []);
 
