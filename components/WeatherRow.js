@@ -13,7 +13,7 @@ const WeatherRow = ({ item, index }) => {
     const formatTemperature = () => {
         const { day } = item.temp;
 
-        const formattedTemperature = `${day} °C`;
+        const formattedTemperature = `${Math.round(day)} °C`;
 
         return (
             <Text style={styles.temperature}>{formattedTemperature}</Text>
