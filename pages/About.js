@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
 import { COLORS } from '../styles/Style';
-import CustomButton from '../components/CustomButton';
 
 const About = ({ navigation }) => {
   const goToSearch = () => navigation.navigate('Rechercher');
@@ -21,8 +20,6 @@ const About = ({ navigation }) => {
                     title={'Rechercher'}
                 />
             </View>
-            {/* A développer et faire pendant un exercice */}
-            <CustomButton onClick={goToSearch} title={'Rechercher'} />
         </View>
     );
 };
