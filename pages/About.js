@@ -2,8 +2,10 @@ import React from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
 import { COLORS } from '../styles/Style';
 import CustomButton from '../components/CustomButton';
+import MyButton from '../components/MyButton';
 
 const About = ({ navigation }) => {
+    // Go to search
   const goToSearch = () => navigation.navigate('Rechercher');
 
     return (
@@ -23,6 +25,7 @@ const About = ({ navigation }) => {
             </View>
             {/* A développer et faire pendant un exercice */}
             <CustomButton onClick={goToSearch} title={'Rechercher'} />
+            <MyButton title="Bonjour" />
         </View>
     );
 };
