@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
+import Bouton from '../components/Bouton';
 import { COLORS } from '../styles/Style';
 
 const About = ({ navigation }) => {
@@ -20,6 +21,7 @@ const About = ({ navigation }) => {
                     title={'Rechercher'}
                 />
             </View>
+            <Bouton />
         </View>
     );
 };
